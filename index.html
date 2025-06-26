@@ -1,27 +1,16 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>NOX Giriş</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>NOX Terminal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>NOX</h1>
-        <input type="password" id="password" placeholder="Şifreyi girin">
-        <button onclick="checkPassword()">Giriş</button>
-        <p id="error-message"></p>
-    </div>
-
-    <script>
-        function checkPassword() {
-            const password = document.getElementById("password").value;
-            if (password === "noX178903") {
-                window.location.href = "nox.html";
-            } else {
-                document.getElementById("error-message").textContent = "Hatalı şifre.";
-            }
-        }
-    </script>
+  <div class="terminal">
+    <div class="output" id="output"></div>
+    <input type="text" id="commandInput" placeholder="Komut girin..." autofocus>
+  </div>
+  <script src="darkmode.js"></script>
+  <script src="nox-ai.js"></script>
 </body>
 </html>
