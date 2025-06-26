@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>NOX Giriş</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>NOX</h1>
+        <input type="password" id="password" placeholder="Şifreyi girin">
+        <button onclick="checkPassword()">Giriş</button>
+        <p id="error-message"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password === "noX178903") {
+                window.location.href = "nox.html";
+            } else {
+                document.getElementById("error-message").textContent = "Hatalı şifre.";
+            }
+        }
+    </script>
+</body>
+</html>
